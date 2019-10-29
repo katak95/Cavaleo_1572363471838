@@ -35,6 +35,7 @@ import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 // Import Services
 import { UserService } from '../../services/user.service';
+import { HorseService } from '../../services/horse.service';
 // Import Models
 import { User } from '../../domain/cavaleo_db/user';
 import { Horse } from '../../domain/cavaleo_db/horse';
