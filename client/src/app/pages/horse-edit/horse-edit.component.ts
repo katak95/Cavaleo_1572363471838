@@ -42,18 +42,8 @@ import { User } from '../../domain/cavaleo_db/user';
 
 // START - USED SERVICES
 /**
-* HorseService.create
-*	@description CRUD ACTION create
-*
-* HorseService.get
-*	@description CRUD ACTION get
-*	@param ObjectId id Id resource
-*
 * UserService.list
 *	@description CRUD ACTION list
-*
-* HorseService.update
-*	@description CRUD ACTION update
 *
 */
 // END - USED SERVICES

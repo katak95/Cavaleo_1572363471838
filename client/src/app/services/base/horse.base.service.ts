@@ -93,63 +93,6 @@ export class HorseBaseService {
 
     // CRUD METHODS
 
-    /**
-    * HorseService.create
-    *   @description CRUD ACTION create
-    *
-    */
-    create(item: Horse): Observable<Horse> {
-        return this.http
-            .post<Horse>(this.contextUrl, item)
-            .pipe(map(data => data));
-    }
-
-    /**
-    * HorseService.delete
-    *   @description CRUD ACTION delete
-    *   @param ObjectId id Id
-    *
-    */
-    remove(id: string): Observable<void> {
-        return this.http
-            .delete<void>(this.contextUrl + '/' + id)
-            .pipe(map(data => data));
-    }
-
-    /**
-    * HorseService.get
-    *   @description CRUD ACTION get
-    *   @param ObjectId id Id resource
-    *
-    */
-    get(id: string): Observable<Horse> {
-        return this.http
-            .get<Horse>(this.contextUrl + '/' + id)
-            .pipe(map(data => data));
-    }
-
-    /**
-    * HorseService.list
-    *   @description CRUD ACTION list
-    *
-    */
-    list(): Observable<Horse[]> {
-        return this.http
-            .get<Horse[]>(this.contextUrl)
-            .pipe(map(data => data));
-    }
-
-    /**
-    * HorseService.update
-    *   @description CRUD ACTION update
-    *
-    */
-    update(item: Horse): Observable<Horse> {
-        return this.http
-            .post<Horse>(this.contextUrl + '/' + item._id, item)
-            .pipe(map(data => data));
-    }
-
 
     // Custom APIs
 
