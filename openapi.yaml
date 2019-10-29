@@ -111,6 +111,193 @@ paths:
                 
 
   #-----  Horse  -----
+  /horse/:
+    post:
+      x-skaffolder-id: 5db867e5bf13b4151b34095e
+      x-skaffolder-name: create
+      x-skaffolder-id-resource: 5db85db4bcbe47264d823499
+      x-skaffolder-resource: Horse
+      x-skaffolder-crudAction: create
+      x-skaffolder-crudType: 
+      x-skaffolder-description: CRUD ACTION create
+      x-skaffolder-returnDesc: 
+      x-skaffolder-returnType: 
+      x-skaffolder-url: /
+      x-skaffolder-roles: []
+      summary: CRUD ACTION create
+      tags:
+        - Horse
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Horse"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                birthdate:
+                  type: integer
+                name:
+                  type: string
+    get:
+      x-skaffolder-id: 5db867e5bf13b4151b340960
+      x-skaffolder-name: list
+      x-skaffolder-id-resource: 5db85db4bcbe47264d823499
+      x-skaffolder-resource: Horse
+      x-skaffolder-crudAction: list
+      x-skaffolder-crudType: 
+      x-skaffolder-description: CRUD ACTION list
+      x-skaffolder-returnDesc: 
+      x-skaffolder-returnType: 
+      x-skaffolder-url: /
+      x-skaffolder-roles: []
+      summary: CRUD ACTION list
+      tags:
+        - Horse
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Horse"
+    
+  /horse/{id}:
+    delete:
+      x-skaffolder-id: 5db867e5bf13b4151b340961
+      x-skaffolder-name: delete
+      x-skaffolder-id-resource: 5db85db4bcbe47264d823499
+      x-skaffolder-resource: Horse
+      x-skaffolder-crudAction: delete
+      x-skaffolder-crudType: 
+      x-skaffolder-description: CRUD ACTION delete
+      x-skaffolder-returnDesc: 
+      x-skaffolder-returnType: 
+      x-skaffolder-url: /{id}
+      x-skaffolder-roles: []
+      summary: CRUD ACTION delete
+      tags:
+        - Horse
+      parameters:
+        - name: id
+          x-skaffolder-type: ObjectId
+          in: path
+          description: Id
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+    get:
+      x-skaffolder-id: 5db867e5bf13b4151b34095b
+      x-skaffolder-name: get
+      x-skaffolder-id-resource: 5db85db4bcbe47264d823499
+      x-skaffolder-resource: Horse
+      x-skaffolder-crudAction: get
+      x-skaffolder-crudType: 
+      x-skaffolder-description: CRUD ACTION get
+      x-skaffolder-returnDesc: 
+      x-skaffolder-returnType: 
+      x-skaffolder-url: /{id}
+      x-skaffolder-roles: []
+      summary: CRUD ACTION get
+      tags:
+        - Horse
+      parameters:
+        - name: id
+          x-skaffolder-type: ObjectId
+          in: path
+          description: Id resource
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Horse"
+    post:
+      x-skaffolder-id: 5db867e5bf13b4151b34095d
+      x-skaffolder-name: update
+      x-skaffolder-id-resource: 5db85db4bcbe47264d823499
+      x-skaffolder-resource: Horse
+      x-skaffolder-crudAction: update
+      x-skaffolder-crudType: 
+      x-skaffolder-description: CRUD ACTION update
+      x-skaffolder-returnDesc: 
+      x-skaffolder-returnType: 
+      x-skaffolder-url: /{id}
+      x-skaffolder-roles: []
+      summary: CRUD ACTION update
+      tags:
+        - Horse
+      parameters:
+        - name: id
+          x-skaffolder-type: ObjectId
+          in: path
+          description: Id
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Horse"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Horse"
+    
+  /horse/findByowner/{key}:
+    get:
+      x-skaffolder-id: 5db867efbf13b4151b340968
+      x-skaffolder-name: findByowner
+      x-skaffolder-id-resource: 5db85db4bcbe47264d823499
+      x-skaffolder-resource: Horse
+      x-skaffolder-crudAction: findByowner
+      x-skaffolder-crudType: 
+      x-skaffolder-description: CRUD ACTION findByowner
+      x-skaffolder-returnDesc: 
+      x-skaffolder-returnType: 
+      x-skaffolder-url: /findByowner/{key}
+      x-skaffolder-roles: []
+      summary: CRUD ACTION findByowner
+      tags:
+        - Horse
+      parameters:
+        - name: key
+          x-skaffolder-type: Objectid
+          in: path
+          description: Id della risorsa owner da cercare
+          required: true
+          schema:
+            type: Objectid
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Horse"
+    
   #-----  User  -----
   /user/{id}/changePassword:
     post:
@@ -409,7 +596,10 @@ components:
       x-skaffolder-template: Edit_Crud
       x-skaffolder-resource: 5db85db4bcbe47264d823499
       x-skaffolder-services: 
+        - 5db867e5bf13b4151b34095e
+        - 5db867e5bf13b4151b34095b
         - 5db85c38bcbe47264d823376
+        - 5db867e5bf13b4151b34095d
       x-skaffolder-nesteds: 
       x-skaffolder-links: 
       x-skaffolder-roles: []
@@ -419,6 +609,8 @@ components:
       x-skaffolder-template: List_Crud
       x-skaffolder-resource: 5db85db4bcbe47264d823499
       x-skaffolder-services: 
+        - 5db867e5bf13b4151b340961
+        - 5db867e5bf13b4151b340960
       x-skaffolder-nesteds: 
       x-skaffolder-links: 
         - 5db85dc9bcbe47264d82349f
@@ -430,6 +622,7 @@ components:
       x-skaffolder-resource: 5db85c37bcbe47264d823372
       x-skaffolder-services: 
         - 5db85c38bcbe47264d82337a
+        - 5db867efbf13b4151b340968
         - 5db85c38bcbe47264d823377
         - 5db85c38bcbe47264d823375
       x-skaffolder-nesteds: 

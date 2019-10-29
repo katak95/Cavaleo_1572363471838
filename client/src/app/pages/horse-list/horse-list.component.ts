@@ -37,7 +37,15 @@ import { HorseService } from '../../services/horse.service';
 import { Horse } from '../../domain/cavaleo_db/horse';
 
 // START - USED SERVICES
-
+/**
+* HorseService.delete
+*	@description CRUD ACTION delete
+*	@param ObjectId id Id
+*
+* HorseService.list
+*	@description CRUD ACTION list
+*
+*/
 // END - USED SERVICES
 
 /**

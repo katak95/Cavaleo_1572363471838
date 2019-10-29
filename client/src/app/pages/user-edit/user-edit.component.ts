@@ -45,6 +45,10 @@ import { Horse } from '../../domain/cavaleo_db/horse';
 * UserService.create
 *	@description CRUD ACTION create
 *
+* HorseService.findByowner
+*	@description CRUD ACTION findByowner
+*	@param Objectid key Id della risorsa owner da cercare
+*
 * UserService.get
 *	@description CRUD ACTION get
 *	@param ObjectId id Id resource
