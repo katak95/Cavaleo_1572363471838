@@ -35,7 +35,7 @@
 
 export const environment = {
   production: false,
-  endpoint: 'http://localhost:80/api/action.php'
+  endpoint: 'http://151.80.143.68/api/action.php'
 };
 
 /*
