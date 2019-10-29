@@ -73,6 +73,7 @@ export class UserEditComponent implements OnInit {
 
     constructor(
     private userService: UserService,
+    private horseService: HorseService,
     private route: ActivatedRoute,
     private location: Location) {
         // Init item
