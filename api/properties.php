@@ -33,10 +33,10 @@
 <?php 
 	$db_Cavaleo_db_Url = $_ENV["DB_HOST"] ?? '127.0.0.1';
 	$db_Cavaleo_db_User = 'root';
-	$db_Cavaleo_db_Pass = '';
+	$db_Cavaleo_db_Pass = 'On62oKEC';
 	$db_Cavaleo_db_DbName = 'cavaleo_db';
 	
 	
-	$jwt_secret_key = 'mySecretKey';
+	$jwt_secret_key = 'On62oKEC';
 	
 ?>
