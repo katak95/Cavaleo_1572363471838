@@ -41,7 +41,7 @@ class Security extends \Slim\Middleware
     public function call()
     {
     	$app = $this->app;
-
+        error_log("5");
 		$response = $app->response();
 		$response->header('Access-Control-Allow-Origin', '*');
     	$response->header('Access-Control-Allow-Headers', 'Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, pass, user');
@@ -53,7 +53,7 @@ class Security extends \Slim\Middleware
 			return;
 		
     	$app->response->headers->set('Content-Type', 'application/json');
-
+        error_log("6");
 		/*
 
     	//Get headers variable of HTTP request
