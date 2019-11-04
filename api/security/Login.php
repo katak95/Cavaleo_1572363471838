@@ -43,6 +43,7 @@ $app = new \Slim\Slim();
 
 // Login Action
 $app->post('/login',	function () use ($app){
+	error_log("3");
 
 	$body = json_decode($app->request()->getBody());
 	
@@ -52,7 +53,7 @@ $app->post('/login',	function () use ($app){
 		'password'	    => isset($body->password)?$body->password:'',
 	);
 	$user = makeQuery( "SELECT * FROM user WHERE username=:username AND password=:password LIMIT 1" , $params, false);
-	
+	error_log("4");
 	if($user == null) {
 		$app->response()->status(401);
 		echo '{ "message": "Not Authorized" }';
