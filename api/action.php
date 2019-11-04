@@ -36,7 +36,7 @@ require 'properties.php';
 require 'lib/Slim/Slim.php';
 require 'security/Security.php';
 
-error_log("1")
+error_log("1");
 //init Slim Framework
 \Slim\Slim::registerAutoloader();
 $app = new \Slim\Slim();
@@ -51,7 +51,7 @@ require 'security/ManageUser.php';
 		require('./resource/Cavaleo_db/custom/UserCustom.php');
 		require('./resource/Cavaleo_db/User.php');
 	
-error_log("2")
+error_log("2");
 $app->run();
 
 
