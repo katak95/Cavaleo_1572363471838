@@ -36,7 +36,6 @@
 	$db_Cavaleo_db_Pass = 'On62oKEC';
 	$db_Cavaleo_db_DbName = 'cavaleo_db';
 	
-	
 	$jwt_secret_key = 'On62oKEC';
 	
 ?>
